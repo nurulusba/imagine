@@ -45,9 +45,10 @@ useEffect(() => {
 
 const fetchImages = () => {
   const apiRoot = "https://api.unsplash.com";
+  const key = 'Unsplash API_KEY';
 
   axios
-    .get(`${apiRoot}/photos/random?client_id=6Ye9PvNMVLxhXHoJfdIMHeR_xUrbhaK0Oxf0Qsd7wtI&count=13`)
+    .get(`${apiRoot}/photos/random?client_id=${key}&count=13`)
     .then(res => setImages([...images, ...res.data]))
 
 }
